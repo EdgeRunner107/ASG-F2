@@ -67,8 +67,10 @@ function MainPage() {
     }
     const roundFiltered = data.filter(item => (item[7] || '').trim() === selectedRound);
     const uniqueNames = Array.from(new Set(
-      roundFiltered.map(item => (item[4] || '').replace(/[\u200B-\u200D\uFEFF]/g, '').trim()).filter(Boolean)
-    ));
+        roundFiltered
+          .map(item => (item[4] || '').replace(/[\u200B-\u200D\uFEFF]/g, '').trim())
+          .filter(name => name && !name.includes('멤버')) // '멤버' 포함된 이름 제거
+      ));
     setNames(uniqueNames);
   }, [selectedRound, data]);
 
