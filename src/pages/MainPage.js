@@ -24,7 +24,7 @@ function MainPage() {
   };
 
   const handlePasswordSubmit = () => {
-    if (passwordInput === '1234') {
+    if (passwordInput === 'AK47') {
       window.location.href = '/Superior';
     } else {
       alert('비밀번호가 틀렸습니다.');
@@ -47,7 +47,7 @@ function MainPage() {
   `;
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_URL}/a`)
+    axios.get(`https://asg-b2.onrender.com/a`)
       .then(response => {
         const result = response.data;
         setData(result);
@@ -124,7 +124,7 @@ function MainPage() {
         <h1 style={{ textAlign: 'center' }}>ASG Score Board</h1>
 
         <StyledSelect value={selectedRound} onChange={handleRoundChange}>
-          <option value="">전체 회차</option>
+          <option value="">회차 조회</option>
           {rounds.map((round, index) => (
             <option key={index} value={round}>{round}</option>
           ))}

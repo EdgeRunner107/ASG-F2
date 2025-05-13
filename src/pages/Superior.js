@@ -43,7 +43,7 @@ function Superior() {
         setJsonData(jsonData);
         console.log("전송할 JSON:", jsonData);
 
-        axios.post(`${process.env.REACT_APP_API_URL}/upload-json`, { data: jsonData }) 
+        axios.post(`https://asg-b2.onrender.com/upload-json`, { data: jsonData }) 
           .then(res => {
             alert('업로드 성공!');
             console.log(res.data);
@@ -67,16 +67,24 @@ function Superior() {
         <h1 style={{ textAlign: 'center' }}>엑셀부</h1>
 
         <RoundButtonGroup>
+           <RoundButton onClick={() => handleRoundClick(`엑셀부 직급전`)}>
+              직급전
+            </RoundButton>
           {Array.from({ length: 8 }, (_, i) => (
+         
             <RoundButton key={i} onClick={() => handleRoundClick(`엑셀부${i + 1}회차`)}>
               {i + 1}회차
             </RoundButton>
+            
           ))}
         </RoundButtonGroup>
 
    <h1 style={{ textAlign: 'center' }}>음악부</h1>
 
         <RoundButtonGroup>
+           <RoundButton onClick={() => handleRoundClick(`음악부 직급전`)}>
+              직급전
+            </RoundButton>
           {Array.from({ length: 8 }, (_, i) => (
             <RoundButton key={i} onClick={() => handleRoundClick(`음악부${i + 1}회차`)}>
               {i + 1}회차
@@ -86,6 +94,9 @@ function Superior() {
    <h1 style={{ textAlign: 'center' }}>엑셀부루키</h1>
 
         <RoundButtonGroup>
+          <RoundButton onClick={() => handleRoundClick(`엑셀부 루키 직급전`)}>
+              직급전
+            </RoundButton>
           {Array.from({ length: 8 }, (_, i) => (
             <RoundButton key={i} onClick={() => handleRoundClick(`엑셀부루키${i + 1}회차`)}>
               {i + 1}회차
