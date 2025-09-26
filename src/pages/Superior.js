@@ -28,12 +28,12 @@ function Superior() {
 
         // 8번째 열(index 7)에 회차 정보 삽입
         jsonData = jsonData.map((row) => {
-          row[7] = selectedRound;
+          row[8] = selectedRound;
           return row;
         });
 
         // 앞에서 9열까지만 유지 (0 ~ 8)
-        jsonData = jsonData.map(row => row.slice(0, 8));
+        jsonData = jsonData.map(row => row.slice(0, 9));
 
         // 빈 셀 0으로 대체
         jsonData = jsonData.map(row =>
