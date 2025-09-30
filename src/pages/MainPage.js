@@ -138,7 +138,7 @@ const totalScore = filteredDataFinal.reduce((sum, item) => sum + (Number(item[7]
               
               <div style={{ marginTop: '12px', display: 'flex', justifyContent: 'center', gap: '10px' }}>
                 <button onClick={handleLoadExcel} style={groupButtonStyle}>엑셀부</button>
-                <button onClick={handleLoadMusic} style={groupButtonStyle}>엑셀부</button>
+   
                 
                 
               </div>
