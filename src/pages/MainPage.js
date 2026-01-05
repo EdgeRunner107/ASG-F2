@@ -432,20 +432,37 @@ const totalScore = filteredDataFinal.reduce((sum, item) => sum + (Number(item[7]
 export default MainPage;
 
 
-
 const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
   margin-top: 16px;
+  table-layout: fixed; /* 👉 셀 크기 고정 */
+
   th, td {
     border: 1px solid #ccc;
     padding: 8px;
     text-align: center;
+
+    /* 👉 글자가 너무 길어도 영역밖으로 절대 안 튐 */
+    overflow: hidden;
+    white-space: normal;     /* 여러 줄 허용 */
+    word-break: break-word;  /* 긴 단어도 강제 줄바꿈 */
+    text-overflow: ellipsis; /* 너무 길면 ... */
   }
+
   th {
     background-color: #222222ff;
   }
+
+  /* 모바일에서 글자 자동 축소 */
+  @media (max-width: 480px) {
+    th, td {
+      font-size: 0.75rem;
+      padding: 6px;
+    }
+  }
 `;
+
 
 const StyledSelect = styled.select`
   width: 300px;       /* 원하는 만큼 조절 가능 */
@@ -507,4 +524,3 @@ const AdminButton = styled.button`
     background-color: #33ff33be;
   }
 `;
-
