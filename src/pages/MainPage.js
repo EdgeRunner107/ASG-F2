@@ -248,10 +248,16 @@ const totalScore = filteredDataFinal.reduce((sum, item) => sum + (Number(item[7]
     marginTop: "20px"
   }}
 >
- <StyledSelect
+<StyledSelect
   value={selectedRound}
-  onChange={handleRoundChange}
-  onInput={handleRoundChange}   // 👉 모바일에서 즉시 반응
+  onChange={(e) => {
+    handleRoundChange(e);
+    e.target.blur(); // 👉 선택 후 즉시 select 창 닫힘
+  }}
+  onInput={(e) => {
+    handleRoundChange(e);
+    e.target.blur(); // 👉 모바일(iOS) 즉시 닫힘
+  }}
 >
   <option value="">회차 조회</option>
   {rounds.map((round, index) => (
@@ -260,11 +266,17 @@ const totalScore = filteredDataFinal.reduce((sum, item) => sum + (Number(item[7]
 </StyledSelect>
 
   {selectedRound && (
-    <StyledSelect
-      value={selectedName}
-      onChange={handleNameChange}
-      onInput={handleNameChange}     // 👉 즉시 반응
-    >
+  <StyledSelect
+  value={selectedName}
+  onChange={(e) => {
+    handleNameChange(e);
+    e.target.blur();
+  }}
+  onInput={(e) => {
+    handleNameChange(e);
+    e.target.blur();
+  }}
+>
       <option value="">전체</option>
       {names.map((name, index) => (
         <option key={index} value={name}>{name}</option>
