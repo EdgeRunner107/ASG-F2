@@ -248,15 +248,23 @@ const totalScore = filteredDataFinal.reduce((sum, item) => sum + (Number(item[7]
     marginTop: "20px"
   }}
 >
-  <StyledSelect value={selectedRound} onChange={handleRoundChange}>
-    <option value="">회차 조회</option>
-    {rounds.map((round, index) => (
-      <option key={index} value={round}>{round}</option>
-    ))}
-  </StyledSelect>
+ <StyledSelect
+  value={selectedRound}
+  onChange={handleRoundChange}
+  onInput={handleRoundChange}   // 👉 모바일에서 즉시 반응
+>
+  <option value="">회차 조회</option>
+  {rounds.map((round, index) => (
+    <option key={index} value={round}>{round}</option>
+  ))}
+</StyledSelect>
 
   {selectedRound && (
-    <StyledSelect value={selectedName} onChange={handleNameChange}>
+    <StyledSelect
+      value={selectedName}
+      onChange={handleNameChange}
+      onInput={handleNameChange}     // 👉 즉시 반응
+    >
       <option value="">전체</option>
       {names.map((name, index) => (
         <option key={index} value={name}>{name}</option>
