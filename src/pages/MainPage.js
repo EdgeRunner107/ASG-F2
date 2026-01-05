@@ -185,17 +185,19 @@ const totalScore = filteredDataFinal.reduce((sum, item) => sum + (Number(item[7]
         }}
       >
         
+      <div
+        style={{
+          width: "80%",
+          maxWidth: "900px",
+          background: "rgba(0,0,0,0.75)",
+          padding: "20px",
+          borderRadius: "12px",
+          color: "white",
 
-        <div
-          style={{
-            width: "80%",
-            maxWidth: "900px",
-            background: "rgba(0,0,0,0.75)",
-            padding: "20px",
-            borderRadius: "12px",
-            color: "white",
-          }}
-        >
+          /* 모바일 화면에서 폭 제한 */
+          maxWidth: "500px",
+        }}
+      >
                 <img
   src={process.env.PUBLIC_URL + "/img/logo1.png"}
   alt="logo"
@@ -446,7 +448,7 @@ const Table = styled.table`
 `;
 
 const StyledSelect = styled.select`
-  width: 500px;       /* 원하는 만큼 조절 가능 */
+  width: 300px;       /* 원하는 만큼 조절 가능 */
   padding: 10px 14px;
   font-size: 1rem;
   border-radius: 8px;
