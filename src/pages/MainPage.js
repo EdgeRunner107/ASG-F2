@@ -249,7 +249,7 @@ const totalScore = filteredDataFinal.reduce((sum, item) => sum + (Number(item[7]
                 <button onClick={handleLoadExcel} style={groupButtonStyle}
                 onMouseEnter={(e) => (e.target.style.backgroundColor = "#33ff33be")}
                 onMouseLeave={(e) => (e.target.style.backgroundColor = "#333333ff")}>
-                 HM 엑셀부 시즌 3</button>
+                 HM 엑셀부 시즌 4</button>
 
                 
                 
@@ -258,7 +258,7 @@ const totalScore = filteredDataFinal.reduce((sum, item) => sum + (Number(item[7]
                 <button onClick={handleLoadMusic} style={groupButtonStyle}
                 onMouseEnter={(e) => (e.target.style.backgroundColor = "#33ff33be")}
                 onMouseLeave={(e) => (e.target.style.backgroundColor = "#333333ff")}>
-                 HM 엑셀부 시즌 4</button>
+                 HM 엑셀부 시즌 5</button>
 
                 
                 
