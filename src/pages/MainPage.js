@@ -246,19 +246,19 @@ const totalScore = filteredDataFinal.reduce((sum, item) => sum + (Number(item[7]
               
               
                   <div style={{ marginTop: '12px', display: 'flex', justifyContent: 'center', gap: '10px' }}>
-                <button onClick={handleLoadMusic} style={groupButtonStyle}
+                <button onClick={handleLoadExcel} style={groupButtonStyle}
                 onMouseEnter={(e) => (e.target.style.backgroundColor = "#33ff33be")}
                 onMouseLeave={(e) => (e.target.style.backgroundColor = "#333333ff")}>
-                 HM 엑셀부 시즌 5</button>
+                 HM 엑셀부 시즌 6</button>
 
                 
                 
               </div>
                        <div style={{ marginTop: '12px', display: 'flex', justifyContent: 'center', gap: '10px' }}>
-                <button onClick={handleLoadExcel} style={groupButtonStyle}  
+                <button onClick={handleLoadMusic} style={groupButtonStyle}  
                 onMouseEnter={(e) => (e.target.style.backgroundColor = "#33ff33be")}
                 onMouseLeave={(e) => (e.target.style.backgroundColor = "#333333ff")}>
-                 HM 엑셀부 시즌 6</button>
+                 HM 엑셀부 시즌 7</button>
 
                 
                 
