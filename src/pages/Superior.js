@@ -75,7 +75,7 @@ function Superior() {
     } else if (selectedRound.startsWith('스타부')) {
       return (e) => handleFileChange(e, 'https://asg-b2.onrender.com/upload-jsonc');
     } else if (selectedRound.startsWith('엑셀부')) {
-      return (e) => handleFileChange(e, 'https://asg-b2.onrender.com/upload-jsonb');
+      return (e) => handleFileChange(e, 'https://asg-b2.onrender.com/upload-jsond');
     } else {
       // 기본값 (안 쓰일 듯)
       return (e) => handleFileChange(e, 'https://asg-b2.onrender.com/upload-json');
